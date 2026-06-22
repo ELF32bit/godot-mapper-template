@@ -14,7 +14,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="The Rolling Ball of DOOM"
+config/name="Mapper Plugin: The Rolling Ball of DOOM"
 run/main_scene="uid://cxyekhw1k05hd"
 config/features=PackedStringArray("4.5")
 config/icon="res://application/icon.svg"
