@@ -1,0 +1,43 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
+[application]
+
+config/name="The Rolling Ball of DOOM"
+run/main_scene="uid://cxyekhw1k05hd"
+config/features=PackedStringArray("4.5")
+config/icon="res://application/icon.svg"
+
+[autoload]
+
+Application="*uid://d3v12p7qrq75e"
+Singleton="*uid://dh3irpr1ec83h"
+GUI="*res://interfaces/GUI.tscn"
+
+[editor]
+
+naming/node_name_num_separator=3
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/mapper/plugin.cfg")
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="mobile"

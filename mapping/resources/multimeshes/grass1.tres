@@ -1,0 +1,7 @@
+[gd_resource type="MultiMesh" format=3 uid="uid://dm52fvqxl1652"]
+
+[ext_resource type="ArrayMesh" uid="uid://bxapr1sjf2aw0" path="res://mapping/resources/multimeshes/meshes/grass.mesh" id="1_2l63t"]
+
+[resource]
+transform_format = 1
+mesh = ExtResource("1_2l63t")
