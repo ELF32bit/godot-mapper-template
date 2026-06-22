@@ -863,8 +863,8 @@ func build_map(map: MapperMapResource, wads: Array[MapperWadResource] = []) -> P
 				# material surface names are required for override materials
 				var surface_index := brush.mesh.get_surface_count() - 1
 				brush.mesh.surface_set_name(surface_index, material)
-		if settings.brush_shadow_meshes and brush.mesh:
-			if not settings.use_threads:
+		if settings.shadow_meshes and settings.brush_shadow_meshes:
+			if brush.mesh and not settings.use_threads:
 				MapperUtilities.generate_shadow_mesh(brush.mesh)
 
 		# creating brush collision shapes
