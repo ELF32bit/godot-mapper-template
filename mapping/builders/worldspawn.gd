@@ -26,7 +26,8 @@ static func build(map: MapperMap, entity: MapperEntity) -> Node:
 static func build_grass_multimesh(map: MapperMap, entity: MapperEntity, parent: Node) -> void:
 	var multimesh := map.loader.load_resource("resources/multimeshes/grass1")
 	var transform_array := entity.generate_surface_distribution(
-		["prototype/*"], 1.0, 0.0, 60.0, false, false, 0)
+		["prototype/*"], 1.0, 0.0, 60.0, false, false,
+		map.settings.options.get("grass_seed", 0))
 
 	spread_transform_array(transform_array, 0.25)
 	scale_transform_array(transform_array,

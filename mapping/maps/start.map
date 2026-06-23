@@ -1750,6 +1750,7 @@
 "origin" "-384 0 288"
 "targetname" "p1"
 "target" "p2"
+"tilt" "0.0"
 }
 // entity 33
 {
@@ -1757,6 +1758,7 @@
 "origin" "0 384 288"
 "targetname" "p2"
 "target" "p3"
+"tilt" "0.0"
 }
 // entity 34
 {
@@ -1764,6 +1766,7 @@
 "origin" "384 0 288"
 "targetname" "p3"
 "target" "p4"
+"tilt" "0.0"
 }
 // entity 35
 {
@@ -1771,6 +1774,7 @@
 "origin" "0 -384 288"
 "targetname" "p4"
 "target" "p1"
+"tilt" "0.0"
 }
 // entity 36
 {

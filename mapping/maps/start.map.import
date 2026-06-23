@@ -15,6 +15,7 @@ dest_files=["res://.godot/imported/start.map-a2ce0e6803be3613ed59c00ed69da194.sc
 game=0
 wads=[]
 options={
+"grass_seed": 0,
 "occlusion_culling": false,
 "print_progress": false
 }

@@ -1,6 +1,6 @@
 # Game template for [godot-mapper](https://github.com/ELF32bit/godot-mapper) plugin
 ![Demonstration](screenshots/demonstration.png)<br>
-The rolling ball type of game is perfect for beginners to play with.<br>
+The rolling ball type of game is perfect for beginners to experiment with.<br>
 Unfortunately, even a simple game like that requires quite many directories.<br>
 Set **`Generic`** game path to the project **`mapping`** directory in **TrenchBroom**.<br>
 
