@@ -4,7 +4,7 @@ The rolling ball type of game is perfect for beginners to play with.<br>
 Unfortunately, even a simple game like that requires quite many directories.<br>
 Set **`Generic`** game path to the project **`mapping`** directory in **TrenchBroom**.<br>
 
-> Games configuration can be changed in **`addons/mapper.gd`** games file.
+> Project configuration can be changed in **`addons/mapper.gd`** games file.
 
 ## Project directories
 * **`addons`** is a directory for modular code (plugins, tools).

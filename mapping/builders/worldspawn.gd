@@ -6,7 +6,7 @@ static func build(map: MapperMap, entity: MapperEntity) -> Node:
 	if not node: return null
 
 	# painting grass where info_grass entities are
-	paint_grass(map, entity, node)
+	build_grass_multimesh(map, entity, node)
 
 	# creating ambient audio player under the node
 	var ambient_ost_player := AudioStreamPlayer.new()
@@ -23,7 +23,7 @@ static func build(map: MapperMap, entity: MapperEntity) -> Node:
 	return node
 
 
-static func paint_grass(map: MapperMap, entity: MapperEntity, parent: Node) -> void:
+static func build_grass_multimesh(map: MapperMap, entity: MapperEntity, parent: Node) -> void:
 	var multimesh := map.loader.load_resource("resources/multimeshes/grass1")
 	var transform_array := entity.generate_surface_distribution(
 		["prototype/*"], 1.0, 0.0, 60.0, false, false, 0)

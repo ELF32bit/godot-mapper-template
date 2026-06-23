@@ -1,2 +1,6 @@
 # Godot 4+ specific ignores
 .godot/
+/android/
+mapping/mapdata/*
+mapping/maps/autosave
+characters/maps/autosave
