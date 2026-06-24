@@ -13,6 +13,7 @@ extends RigidBody3D
 @onready var spring_arm: SpringArm3D = $"SpringArm3D"
 @onready var collision_shape: CollisionShape3D = $"CollisionShape3D"
 @onready var _original_gravity_scale := float(gravity_scale)
+@onready var jump_ray_cast: RayCast3D = $"RayCast3D"
 
 var target_velocity: Vector3 = Vector3.ZERO
 
@@ -60,8 +61,8 @@ func _physics_process(delta: float) -> void:
 		target_velocity = direction * velocity_fast
 
 	# RayCast3D ignores parents transform (set as `Top Level`)
-	$RayCast3D.position = global_position
-	if $RayCast3D.is_colliding():
+	jump_ray_cast.position = global_position
+	if jump_ray_cast.is_colliding():
 		if input.is_jump_pressed:
 			target_velocity += Vector3.UP * velocity_jumping
 

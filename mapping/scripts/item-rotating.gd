@@ -11,6 +11,6 @@ func _physics_process(delta: float) -> void:
 
 func _on_body_entered(body: Node3D) -> void:
 	if not body is RigidBody3D: return
-	Singleton.coins_collected += 1
+	GameState.coins_collected += 1
 	generic.emit()
 	queue_free()

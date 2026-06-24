@@ -2,4 +2,4 @@ extends Control
 
 
 func update_coins_collected() -> void:
-	$CoinsCounter.text = str(Singleton.coins_collected)
+	$CoinsCounter.text = str(GameState.coins_collected)

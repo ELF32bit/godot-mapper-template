@@ -22,7 +22,7 @@ config/icon="res://application/icon.svg"
 [autoload]
 
 Application="*uid://d3v12p7qrq75e"
-Singleton="*uid://dh3irpr1ec83h"
+GameState="*uid://dh3irpr1ec83h"
 GUI="*res://interfaces/GUI.tscn"
 
 [editor]
