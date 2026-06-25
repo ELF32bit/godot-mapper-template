@@ -13,3 +13,8 @@ Set **`Generic`** game path to the project **`mapping`** directory in **TrenchBr
 * **`interfaces`** should contain all kinds of buttons, progress bars, etc...
 * **`mapping`** is the main directory for game levels with map resources.
 * **`sources`** should contain all game logic and the game state.
+
+## Taking it further
+1. Create a moving platform with **`func_train`** classname.
+2. Create animation player node inside the start scene.
+3. Animate the platform by hand, set as autoplay.
