@@ -7,7 +7,7 @@ static func build(map: MapperMap, entity: MapperEntity) -> Node:
 	var targets := map.get_first_entity_target_recursively(
 		entity, "target", "targetname", "path_corner")
 
-	# immediately marking closed paths and resolving open paths
+	# marking and sorting closed paths
 	if targets.size() > 0 and targets[-1] == entity:
 		var start_targetname: Array = [entity,
 			entity.get_string_property("targetname", "")]
@@ -17,6 +17,7 @@ static func build(map: MapperMap, entity: MapperEntity) -> Node:
 				start_targetname = [path_entity, targetname]
 		for path_entity in targets:
 			path_entity.metadata["_closed_path"] = start_targetname[0]
+	# also resolving open paths
 	elif targets.size() > 0:
 		for path_entity in targets:
 			path_entity.metadata["_open_path"] = false
@@ -40,6 +41,7 @@ static func post_build(map: MapperMap) -> Dictionary:
 			for index in range(targets.size()):
 				paths.get_or_add(targets[index], []).append({
 					"path_length": path_length[index],
+					"path_is_closed": true,
 					"path_node": path })
 			path.curve.remove_meta("_MAPPER_LENGTH")
 
@@ -54,6 +56,7 @@ static func post_build(map: MapperMap) -> Dictionary:
 			for index in range(targets.size()):
 				paths.get_or_add(targets[index], []).append({
 					"path_length": path_length[index],
+					"path_is_closed": false,
 					"path_node": path })
 			path.curve.remove_meta("_MAPPER_LENGTH")
 
