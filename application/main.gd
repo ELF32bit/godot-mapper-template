@@ -4,13 +4,17 @@ extends Node
 
 
 func _ready() -> void:
-	scene_tree.create_timer(0.05).timeout.connect(load_map)
-	scene_tree.scene_changed.connect(_spawn_player)
+	scene_tree.scene_changed.connect(_on_scene_changed)
+	call_deferred("load_map")
 
 
 func load_map(map_path: String = "res://mapping/scenes/start.tscn") -> void:
 	var map: PackedScene = load(map_path)
 	scene_tree.change_scene_to_packed(map)
+
+
+func _on_scene_changed(delay: float = 0.05) -> void:
+	scene_tree.create_timer(delay).timeout.connect(_spawn_player)
 
 
 func _spawn_player() -> void:
